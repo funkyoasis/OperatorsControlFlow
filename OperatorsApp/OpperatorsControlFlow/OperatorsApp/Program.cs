@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OperatorsApp
 {
@@ -25,25 +26,32 @@ namespace OperatorsApp
 			var weeksToBirthday = totalDaysToBirthday / daysInWeek;
 			var days = totalDaysToBirthday % daysInWeek;
 			var res = EvenOdd(23);
-			*/
+			
 			const int NUM_ROWS = 2;
 			const int NUM_COLS = 5;
 			bool running = true;
 			int row = 0;
 			int col = 0;
 			int spriteNo = -1;
-			/*
+			
 			while (running)
 			{
 				spriteNo = ++spriteNo % (NUM_ROWS * NUM_COLS);
 				row = spriteNo / NUM_COLS;
 				col = spriteNo % NUM_COLS;
 			}
-			*/
+			
 			int mark = 86;
 				var grade = mark >= 65 ? (mark>= 85 ? "Distinction" : "Pass") : "Fail";
 			//shorthand way of creating an if statement
 			var message = Priority(2);
+			*/
+			List<int>  nums = new List<int> { -10, -6, -22, -17, -3 };
+
+			Console.WriteLine("Highest Foreach loop: " + LoopTypes.HighestForEachLoop(nums));
+			Console.WriteLine("Highest Forloop: " + LoopTypes.HighestForLoop(nums));
+			Console.WriteLine("Highest while loop: " + LoopTypes.HighestWhileLoop(nums));
+			Console.WriteLine("Highest do-while loop: " + LoopTypes.HighestDoWhileLoop(nums));
 		}
 		public static bool EvenOdd(int num)
 		{
